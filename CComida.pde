@@ -1,32 +1,44 @@
 class Comida {
-  PImage[] comida = new PImage[7];
+  PImage[] comida = new PImage[13];
   int num;
-  float x3, y1, x1, x2, x4, y2;
-  float distancia, distancia2, distancia3, distancia4, distancia5, distancia6, distancia7, distancia8;
+  //float x3, y1, x1, x2, x4, y2, distancia3, distancia4, distancia5;
+  float distancia, distancia2, distancia3, x1, menos, y1, y2,y3;
   int puntaje = 0;
+  int estado;
+  int yy;
+
 
 
   Comida() {
     for (int i=0; i<comida.length; i++) {
       comida[i] = loadImage( "comidita"+i+".png");
     }
-    x3= random(200, 300);
-    x1= random(400, 600);
-    x2= random(100, 200);
-    x4= random(400, 600);
+    menos = random(50, 70);
+    // x3= random(200, 300);
+      x1= random(1, 600);
+    // x2= random(100, 200);
+    // x4= random(400, 600);
     y1= -500;
     y2= -100;
-    estado=2;
+    y3= -1000;
+    estado = 2;
+    yy= 500;
   }
 
   void dibujar() {
     image(comida[3], 0, 0);
-    image(comida[0], x3, y1);
-    image(comida[1], x1, y2);
-    image(comida[2], x2, y1);
-    image(comida[4], x2, y1);
-    image(comida[5], x2, y2);
-    image(comida[6], x4, y1);
+    image(comida[0], x1/2, y1);
+    image(comida[1], x1/3, y3);
+    image(comida[2], x1, y2);
+    image(comida[4], x1/4, y2);
+    image(comida[5], x1*2, y3);
+    image(comida[6], x1/4, y1);
+    image(comida[7], x1*3, y3);
+    image(comida[8], x1/2, y1);
+    image(comida[9], x1, y2);
+    image(comida[10], x1*2, y3);
+    image(comida[11], x1*6, y3);
+    image(comida[12], x1*4, y2);
     puntaje();
   }
   void comidacayendo() {
@@ -38,20 +50,19 @@ class Comida {
     if (y2>600) {
       y2=-100;
     }
+    y3= y3+ random(5);
+    if(y3>600){
+      y3=-800;
+    }
   }
   void choque() {
-    distancia = dist( mouseX, mouseY, x1, y1);
-    distancia2= dist(mouseX, mouseY, x2, y2);
-    distancia3= dist(mouseX, mouseY, x3, y1);
-    distancia4= dist(mouseX, mouseY, x4, y1);
-    distancia5= dist(mouseX, mouseY, x3, y2);
-    distancia6= dist(mouseX, mouseY, x4, y2);
-    distancia7= dist(mouseX, mouseY, x2, y1);
-    distancia8= dist(mouseX, mouseY, x1, y2);
-  }
-  void mousePressed() {
+    // distancia = dist(x1, y1, mouseX, yy);
+    // distancia2= dist(x1, y2, mouseX, yy);
     if (mousePressed) {
-      if (distancia < 0.5 || distancia2 < 0.5 || distancia3 < 0.5 || distancia4 < 0.5) {
+      float distancia = dist(x1, y1, mouseX, yy);
+      float distancia2 = dist(x1,y2,mouseX,yy);
+      float distancia3 = dist(x1,y3,mouseX,yy);
+      if (distancia < 200 || distancia2 < 200 || distancia3 < 200) {
         puntaje++;
       }
     }

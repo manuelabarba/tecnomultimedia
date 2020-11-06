@@ -1,5 +1,6 @@
 class Presentacion {
   PImage presentacion;
+  int estado;
 
   Presentacion () {
     presentacion = loadImage("comidita3.png");
