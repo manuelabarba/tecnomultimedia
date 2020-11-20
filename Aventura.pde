@@ -106,53 +106,52 @@ class Aventura {
   }
   void elecciones() {
     if (estado==2) {
-      if (mouseX>=height/12 && mouseX<=height/2+height/12 && mouseY>=width/2+height/12 && mouseY<=height-height/6) {
+      if (mouseX>=escX(50) && mouseX<=escX(350) && mouseY>=escY(450) && mouseY<=escY(500)) {
         estado= 3;
       }
       if (estado==2) {
-        if (mouseX>=width/2+height/12 && mouseX<=width-height/6 && mouseY>= width/2+height/12 && mouseY <= height-height/6) {
+        if (mouseX>=escX(450) && mouseX<=escX(700) && mouseY>= escY(450) && mouseY <= escY(500)) {
           estado= 5;
         }
       }
     }
     if (estado==3) {
-      if (mouseX>= width/2+height/12 && mouseX<= width-height/6 && mouseY>= height/12 && mouseY<= height/6) {
+      if (mouseX>= escX(450) && mouseX<= escX(700) && mouseY>= escY(50) && mouseY<= escY(100)) {
         estado= 4;
       }
     }
     if (estado==3) {
-      if (mouseX>= height/12 && mouseX<= width/2 && mouseY>= height/12 && mouseY<= height/6) {
+      if (mouseX>= escX(50) && mouseX<= escX(400) && mouseY>= escY(50) && mouseY<= escY(100)) {
         estado= 6;
       }
     }
     if (estado==6) {
-      if (mouseX>=height/3 && mouseX<= width/2 && mouseY>= height-height/6 && mouseY<= height) {
+      if (mouseX>=escX(200) && mouseX<= escX(400) && mouseY>= escY(500) && mouseY<= escY(600)) {
         estado= 7;
       }
     }
     if (estado==4) {
-      if (mouseX>=height/12 && mouseX<= height/2+height/12 && mouseY>=height/3 && mouseY<=width/2) {
+      if (mouseX>=escX(50) && mouseX<= escX(350) && mouseY>=escY(200) && mouseY<=escY(400)) {
         estado=9;
       }
     }
     if (estado==4) {
-      if (mouseX>=width/2 && mouseX<= width-height/6 && mouseY>= width/4 && mouseY<= width/2) {
-        //estado=10;
+      if (mouseX>=escX(400) && mouseX<= escX(700) && mouseY>= escY(200) && mouseY<= escY(400)) {
         estado=12;
       }
     }
     if (estado==8) {
-      if (mouseX>=height/2+height/12 && mouseX<= height && mouseY>= width/2 && mouseY<= height-height/6) {
+      if (mouseX>=escX(350) && mouseX<= escX(600) && mouseY>= escY(400) && mouseY<= escY(500)) {
         estado=7;
       }
     }
     if (estado==5) {
-      if (mouseX>=height/12 && mouseX <= height/2+height/12 && mouseY >= height/3 && mouseY<= height/2+height/12) {
+      if (mouseX>=escX(50) && mouseX <= escX(350) && mouseY >= escY(200) && mouseY<= escY(350)) {
         estado=6;
       }
     }
     if (estado==5) {
-      if (mouseX>=width/2 && mouseX<= height && mouseY>= height/3 && mouseY<= height/2+height/12) {
+      if (mouseX>=escX(400) && mouseX<= escX(600) && mouseY>= escY(200) && mouseY<= escY(350)) {
         estado=8;
       }
     }

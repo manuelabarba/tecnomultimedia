@@ -25,7 +25,7 @@ class Pantallas {
   }
   void pantalla2() {
     image(images[1], 0, 0, escX(800), escY(600));
-    textSize(height/20);
+    textSize(escX(30));
     textAlign(CENTER);
     fill(0);
     text("Ricitos de Oro estaba caminando por el bosque cuando se encontró con una casa", escX(150), escY(200), escX(500), escY(500));
