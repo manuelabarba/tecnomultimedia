@@ -21,7 +21,7 @@ class Presentacion {
     fill(0);
     text("Instrucciones de juego:", escX(250), escY(325));
     textAlign(CENTER);
-    text("Mover el mouse hacia los costados para atrapar los platos haciendo click hasta sumar 100 puntos", escX(150), escY(350), escX(500), escY(200));
+    text("Mover el mouse hacia los costados para atrapar los platos haciendo click hasta sumar 25 puntos", escX(150), escY(350), escX(500), escY(200));
   }
   float escX(float valor_) {
     return map( valor_, 0, 800, 0, width);

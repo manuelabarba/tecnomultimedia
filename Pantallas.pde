@@ -103,38 +103,32 @@ class Pantallas {
     fill(0);
     text("En la habitación hay camas muy cómodas", escX(400), escY(50));
     fill(255);
-    rect(escX(50), escY(250), escX(300), escY(50));
-    rect(width/2, escY(250), escX(300), escY(50));
+    rect(escX(50), escY(200), escX(300), escY(50));
+    rect(width/2, escY(200), escX(300), escY(50));
     fill(0);
-    text("Terminar la aventura e irme a casa", escX(50), escY(250), escX(300), escY(100));
-    text("ENTER", escX(50), escY(300), escX(300), escY(100));
-    text("Tengo sueño, así que duermo en una de las camas", escX(400), escY(250), escX(300), escY(100));
-    text("FLECHA PARA ARRIBA", escX(400), escY(300), escX(300), escY(100));
+    text("Terminar la aventura e irme a casa", escX(50), escY(200), escX(300), escY(100));
+    text("Tengo sueño, así que duermo en una de las camas", escX(400), escY(200), escX(300), escY(100));
   }
   void pantalla10() {
     image(images[9], 0, 0, escX(800), escY(600));
     fill(0);
     text("Luego de comer, a Ricitos le agarra sueño", escX(400), escY(50));
     fill(255);
-    rect(escX(50), escY(300), escX(300), escY(50));
-    rect(escX(400), escY(300), escX(300), escY(50));
+    rect(escX(50), escY(400), escX(300), escY(50));
+    rect(escX(400), escY(400), escX(300), escY(50));
     fill(0);
-    text("Dormir en una cama", escX(50), escY(300), escX(300), escY(100));
-    text("Flecha para arriba", escX(50), escY(350), escX(300), escY(100));
-    text("Ir a casa a dormir", escX(400), escY(300), escX(300), escY(100));
-    text("ENTER", escX(400), escY(350), escX(300), escY(100));
+    text("Dormir en una cama", escX(50), escY(400), escX(300), escY(100));
+    text("Ir a casa a dormir", escX(400), escY(400), escX(300), escY(100));
   }
   void pantalla11() {
     image(images[10], 0, 0, escX(800), escY(600));
     fill(255);
-    text("Llegaron los osos, te vieron durmiendo y te asustaste", escX(400), escY(250), escX(300), escY(100));
+    text("Llegaron los osos, te vieron durmiendo y te asustaste", escX(400), escY(250), escX(400), escY(100));
+    fill(0);
+    rect(50, 50, 300, 50);
+    rect(400, 50, 300, 50);
     fill(255);
     text("Quedarte y explicar", escX(50), escY(50), escX(300), escY(100));
-    fill(0);
-    text("Flecha para abajo", escX(50), escY(100), escX(300), escY(100));
-    fill(255);
     text("Salir corriendo", escX(400), escY(50), escX(300), escY(100));
-    fill(0);
-    text("ENTER", escX(400), escY(100), escX(300), escY(100));
   }
 }
